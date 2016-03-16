@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface GitApiSessionTask : NSURLSessionTask
-+(void)sessionWithPath: (NSString *)path successHandler:( void ( ^ )(NSURLResponse *response, id responseObject, NSError *error) ) responseHandler;
++(void)sessionWithPath: (NSString *)path successHandler:(void(^)(NSURLSessionTask *task, id responseObject))responseHandler;
 @end

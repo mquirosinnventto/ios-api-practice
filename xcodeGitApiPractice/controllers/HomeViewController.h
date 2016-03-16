@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../models/UserModel.h"
+
 @interface HomeViewController : UIViewController
-@property (strong, nonatomic) UserModel *user;
+@property (strong, nonatomic) NSDictionary *userData;
 @property (strong, nonatomic) UIImageView *profileImageView;
 @property (strong, nonatomic) UILabel *nameLabelView;
 @property (strong, nonatomic) UILabel *reposlabelView;
 @property (strong, nonatomic) UILabel *typelabelView;
+- (void)showRepositoriesController;
 @end

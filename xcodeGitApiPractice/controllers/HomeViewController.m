@@ -7,9 +7,11 @@
 //
 
 #import "HomeViewController.h"
-#import "../models/UserModel.h"
+#import "RepositoriesTableView.h"
 #import "../extensions/UIColor+AppColors.h"
 #import "../extensions/UIScreen+AppScreen.h"
+#import "../extensions/GitApiSessionTask.h"
+
 
 @implementation HomeViewController
 float const profileImageSize = 180.0;
@@ -20,22 +22,43 @@ float const screenMargin = 20.0;
     if(self){
         self.view.backgroundColor = [UIColor blueBackground];
         [self viewComponentSetup];
-        self.user = [[UserModel alloc] init];
-        [self.user fetchUserData];
-        [self setViewComponents];
+//        [self setViewComponents];
+        [self testDataFetch];
+        
     }
     return self;
 }
 
+- (void)testDataFetch{
+    void (^handler)(NSURLSessionTask *task, id responseObject) = ^void(NSURLSessionTask *task, id responseObject){
+        self.userData = (NSDictionary*)responseObject;
+        [self setViewComponents];
+    };
+    [GitApiSessionTask sessionWithPath:@"/users/codeschool" successHandler:handler];
+}
 
 - (void)setViewComponents{
-    NSData *profileImageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: self.user.data[@"avatar_url"]]];
+    NSData *profileImageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: self.userData[@"avatar_url"]]];
     UIImage *profileImage = [[UIImage alloc] initWithData:profileImageData];
     self.profileImageView.image = profileImage;
-    self.nameLabelView.text = [@"User Name: " stringByAppendingString: self.user.data[@"login"]];
-    self.typelabelView.text = [@"User type: " stringByAppendingString: self.user.data[@"type"]];
-    self.reposlabelView.text = [NSString stringWithFormat: @"User Repos: %d",(int)self.user.data[@"public_repos"]];
+    self.nameLabelView.text = [@"User Name: " stringByAppendingString: self.userData[@"login"]];
+    self.typelabelView.text = [@"User type: " stringByAppendingString: self.userData[@"type"]];
+    self.reposlabelView.text = [NSString stringWithFormat: @"User Repos: %d",(int)self.userData[@"public_repos"]];
+    UIButton *repoButton = [UIButton buttonWithType: UIButtonTypeRoundedRect];
+    float labelWide = [UIScreen screenWidth] - (screenMargin * 2.0);
+    repoButton.frame = CGRectMake(screenMargin, 460, labelWide, 40);
+    [repoButton setTitle:@"Repositories" forState:UIControlStateNormal];
+    repoButton.backgroundColor = [UIColor whiteColor];
+    [repoButton addTarget:self action: @selector(showRepositoriesController) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:repoButton];
 }
+
+-(void)showRepositoriesController{
+    RepositoriesTableView *reposTableViewController = [[RepositoriesTableView alloc] init];
+    reposTableViewController.view.backgroundColor = [UIColor blueBackground];
+    [self.navigationController pushViewController: reposTableViewController animated:YES];
+}
+
 
 - (void)viewComponentSetup{
     self.profileImageView = [[UIImageView alloc] init];

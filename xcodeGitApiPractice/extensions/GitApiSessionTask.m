@@ -11,15 +11,14 @@
 
 
 @implementation GitApiSessionTask
-NSString *BASE_URL = @"https://api.github.com";
-
-+(void)sessionWithPath: (NSString *)path successHandler:( void ( ^ )(NSURLResponse *response, id responseObject, NSError *error) ) responseHandler {
-
-    NSURL *url = [NSURL URLWithString: BASE_URL];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
+NSString *GIT_URL = @"https://api.github.com";
++(void)sessionWithPath: (NSString *)path successHandler:(void(^)(NSURLSessionTask *task, id responseObject))responseHandler {
+    NSURL *url = [NSURL URLWithString: GIT_URL];
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL: url];
-    [manager dataTaskWithRequest:request completionHandler: responseHandler];
+    
+    [manager GET:path parameters:nil progress:nil success: responseHandler failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: Request couldnt be processed");
+    }];
     
     [manager.operationQueue waitUntilAllOperationsAreFinished];
 }

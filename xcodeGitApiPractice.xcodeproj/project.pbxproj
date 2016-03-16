@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123E56A11C988480007DFA6E /* GitApiSessionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 123E56A01C988480007DFA6E /* GitApiSessionTask.m */; };
+		12796D841C98ED3D00F76DFA /* RepositoriesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12796D831C98ED3D00F76DFA /* RepositoriesTableView.m */; };
 		129E97EC1C97A6B400875790 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E97EB1C97A6B400875790 /* main.m */; };
 		129E97EF1C97A6B400875790 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E97EE1C97A6B400875790 /* AppDelegate.m */; };
 		129E97F51C97A6B400875790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129E97F31C97A6B400875790 /* Main.storyboard */; };
 		129E97F71C97A6B400875790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 129E97F61C97A6B400875790 /* Assets.xcassets */; };
 		129E97FA1C97A6B400875790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129E97F81C97A6B400875790 /* LaunchScreen.storyboard */; };
 		129E98051C97A9AC00875790 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E98041C97A9AC00875790 /* HomeViewController.m */; };
-		129E98091C97B02100875790 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E98081C97B02100875790 /* UserModel.m */; };
 		129E981B1C97BF2E00875790 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E980F1C97BF2E00875790 /* AFHTTPSessionManager.m */; };
 		129E981C1C97BF2E00875790 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E98121C97BF2E00875790 /* AFNetworkReachabilityManager.m */; };
 		129E981D1C97BF2E00875790 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E98141C97BF2E00875790 /* AFSecurityPolicy.m */; };
@@ -25,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		123E569F1C988480007DFA6E /* GitApiSessionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitApiSessionTask.h; sourceTree = "<group>"; };
+		123E56A01C988480007DFA6E /* GitApiSessionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitApiSessionTask.m; sourceTree = "<group>"; };
+		12796D821C98ED3D00F76DFA /* RepositoriesTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesTableView.h; sourceTree = "<group>"; };
+		12796D831C98ED3D00F76DFA /* RepositoriesTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesTableView.m; sourceTree = "<group>"; };
 		129E97E71C97A6B400875790 /* xcodeGitApiPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xcodeGitApiPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		129E97EB1C97A6B400875790 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		129E97ED1C97A6B400875790 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,8 +40,6 @@
 		129E97FB1C97A6B400875790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		129E98031C97A9AC00875790 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		129E98041C97A9AC00875790 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		129E98071C97B02100875790 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		129E98081C97B02100875790 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		129E980E1C97BF2E00875790 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		129E980F1C97BF2E00875790 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		129E98101C97BF2E00875790 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 			children = (
 				129E98031C97A9AC00875790 /* HomeViewController.h */,
 				129E98041C97A9AC00875790 /* HomeViewController.m */,
+				12796D821C98ED3D00F76DFA /* RepositoriesTableView.h */,
+				12796D831C98ED3D00F76DFA /* RepositoriesTableView.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -129,8 +134,6 @@
 		129E98061C97AFC900875790 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				129E98071C97B02100875790 /* UserModel.h */,
-				129E98081C97B02100875790 /* UserModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -158,6 +161,8 @@
 		129E98211C97EB3E00875790 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				123E569F1C988480007DFA6E /* GitApiSessionTask.h */,
+				123E56A01C988480007DFA6E /* GitApiSessionTask.m */,
 				129E98221C97EB8E00875790 /* UIColor+AppColors.h */,
 				129E98231C97EB8E00875790 /* UIColor+AppColors.m */,
 				129E98251C97ED6F00875790 /* UIScreen+AppScreen.h */,
@@ -238,12 +243,13 @@
 			files = (
 				129E981D1C97BF2E00875790 /* AFSecurityPolicy.m in Sources */,
 				129E981F1C97BF2E00875790 /* AFURLResponseSerialization.m in Sources */,
+				123E56A11C988480007DFA6E /* GitApiSessionTask.m in Sources */,
 				129E97EF1C97A6B400875790 /* AppDelegate.m in Sources */,
 				129E97EC1C97A6B400875790 /* main.m in Sources */,
 				129E981B1C97BF2E00875790 /* AFHTTPSessionManager.m in Sources */,
+				12796D841C98ED3D00F76DFA /* RepositoriesTableView.m in Sources */,
 				129E98271C97ED6F00875790 /* UIScreen+AppScreen.m in Sources */,
 				129E98201C97BF2E00875790 /* AFURLSessionManager.m in Sources */,
-				129E98091C97B02100875790 /* UserModel.m in Sources */,
 				129E981C1C97BF2E00875790 /* AFNetworkReachabilityManager.m in Sources */,
 				129E98241C97EB8E00875790 /* UIColor+AppColors.m in Sources */,
 				129E98051C97A9AC00875790 /* HomeViewController.m in Sources */,
@@ -394,6 +400,7 @@
 				129E98001C97A6B400875790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
