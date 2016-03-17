@@ -21,19 +21,25 @@
 - (HomeViewController *)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self){
-        self.view = [[HomeView alloc] init];
-        self.user = [[User alloc] initWithJSON];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(viewIsReady) name:@"userDataRequestSucced" object:self.user];
+        
+//        self.user = [[User alloc] initWithJSON];
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(viewIsReady) name:@"userDataRequestSucced" object:self.user];
     }
     return self;
 }
 
-- (void)viewIsReady{
-    NSLog(@"View is Ready...");
-    NSLog(@"%@", self.user.username);
+
+- (void)searchUser{
+    
 }
 
+- (void)loadView{
+    self.view = [[HomeView alloc] initWithController:self];
+}
 
+- (void)viewIsReady{
+
+}
 
 
 -(void)showRepositoriesController{

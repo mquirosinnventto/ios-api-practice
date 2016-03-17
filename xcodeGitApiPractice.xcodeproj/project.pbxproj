@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1201D35B1C9B358900BA9CCC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1201D35A1C9B358900BA9CCC /* ProfileViewController.m */; };
 		123E56A11C988480007DFA6E /* GitApiSessionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 123E56A01C988480007DFA6E /* GitApiSessionTask.m */; };
 		12527C9A1C99DFF900FCF577 /* ApiRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 12527C991C99DFF900FCF577 /* ApiRoute.m */; };
 		12527C9D1C99E2BD00FCF577 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 12527C9C1C99E2BD00FCF577 /* User.m */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1201D3591C9B358900BA9CCC /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		1201D35A1C9B358900BA9CCC /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		123E569F1C988480007DFA6E /* GitApiSessionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitApiSessionTask.h; sourceTree = "<group>"; };
 		123E56A01C988480007DFA6E /* GitApiSessionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitApiSessionTask.m; sourceTree = "<group>"; };
 		12527C981C99DFF900FCF577 /* ApiRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiRoute.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				129E98041C97A9AC00875790 /* HomeViewController.m */,
 				12796D821C98ED3D00F76DFA /* RepositoriesTableView.h */,
 				12796D831C98ED3D00F76DFA /* RepositoriesTableView.m */,
+				1201D3591C9B358900BA9CCC /* ProfileViewController.h */,
+				1201D35A1C9B358900BA9CCC /* ProfileViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				129E97EC1C97A6B400875790 /* main.m in Sources */,
 				129E981B1C97BF2E00875790 /* AFHTTPSessionManager.m in Sources */,
 				12796D841C98ED3D00F76DFA /* RepositoriesTableView.m in Sources */,
+				1201D35B1C9B358900BA9CCC /* ProfileViewController.m in Sources */,
 				1282FF671C9A5F62007484A4 /* HomeView.m in Sources */,
 				129E98271C97ED6F00875790 /* UIScreen+AppScreen.m in Sources */,
 				129E98201C97BF2E00875790 /* AFURLSessionManager.m in Sources */,

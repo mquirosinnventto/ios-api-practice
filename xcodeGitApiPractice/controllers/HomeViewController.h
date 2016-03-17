@@ -10,6 +10,5 @@
 #import "../models/User.h"
 
 @interface HomeViewController : UIViewController
-@property (strong, nonatomic) User *user;
 - (void)showRepositoriesController;
 @end

@@ -15,11 +15,37 @@
 float const profileImageSize = 180.0;
 float const screenMargin = 20.0;
 
--(HomeView *)init{
+-(HomeView *)initWithController: (HomeViewController *)controller{
     self = [super init];
+    _controller = controller;
     self.backgroundColor = [UIColor blueBackground];
+    [self setupComponents];
     return self;
 }
+
+- (void)setupComponents{
+    self.userLabel = [[UILabel alloc] initWithFrame: CGRectMake(100, 100, 200, 40)];
+    self.userLabel.textColor = [UIColor whiteColor];
+    self.userLabel.textAlignment = UIControlContentHorizontalAlignmentCenter;
+    self.userLabel.text = @"Ingrese el usuario git";
+    
+    self.userInput = [[ UITextField alloc] initWithFrame: CGRectMake(100, 150, 200, 40)];
+    self.userInput.borderStyle = UITextBorderStyleRoundedRect;
+    self.userInput.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    self.userInput.placeholder = @"Usuario Git";
+    [self.userInput setFont:[UIFont boldSystemFontOfSize:12]];
+    
+    self.submitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.submitButton.frame = CGRectMake(100, 200, 200, 40);
+    [self.submitButton setTitle: @"Buscar" forState: UIControlStateNormal];
+    
+    [self.submitButton addTarget: self.controller action:@selector(searchUser) forControlEvents: UIControlEventTouchUpInside];
+    
+    [self addSubview: self.userLabel];
+    [self addSubview: self.userInput];
+    [self addSubview: self.submitButton];
+}
+
 
 //- (void)setViewComponents{
 //    NSData *profileImageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: self.userData[@"avatar_url"]]];
