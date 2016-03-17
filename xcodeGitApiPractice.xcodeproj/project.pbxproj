@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		123E56A11C988480007DFA6E /* GitApiSessionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 123E56A01C988480007DFA6E /* GitApiSessionTask.m */; };
+		12527C9A1C99DFF900FCF577 /* ApiRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 12527C991C99DFF900FCF577 /* ApiRoute.m */; };
+		12527C9D1C99E2BD00FCF577 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 12527C9C1C99E2BD00FCF577 /* User.m */; };
 		12796D841C98ED3D00F76DFA /* RepositoriesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12796D831C98ED3D00F76DFA /* RepositoriesTableView.m */; };
+		1282FF671C9A5F62007484A4 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1282FF661C9A5F62007484A4 /* HomeView.m */; };
 		129E97EC1C97A6B400875790 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E97EB1C97A6B400875790 /* main.m */; };
 		129E97EF1C97A6B400875790 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E97EE1C97A6B400875790 /* AppDelegate.m */; };
 		129E97F51C97A6B400875790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129E97F31C97A6B400875790 /* Main.storyboard */; };
@@ -28,8 +31,14 @@
 /* Begin PBXFileReference section */
 		123E569F1C988480007DFA6E /* GitApiSessionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitApiSessionTask.h; sourceTree = "<group>"; };
 		123E56A01C988480007DFA6E /* GitApiSessionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitApiSessionTask.m; sourceTree = "<group>"; };
+		12527C981C99DFF900FCF577 /* ApiRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiRoute.h; sourceTree = "<group>"; };
+		12527C991C99DFF900FCF577 /* ApiRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiRoute.m; sourceTree = "<group>"; };
+		12527C9B1C99E2BD00FCF577 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		12527C9C1C99E2BD00FCF577 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		12796D821C98ED3D00F76DFA /* RepositoriesTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesTableView.h; sourceTree = "<group>"; };
 		12796D831C98ED3D00F76DFA /* RepositoriesTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesTableView.m; sourceTree = "<group>"; };
+		1282FF651C9A5F62007484A4 /* HomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
+		1282FF661C9A5F62007484A4 /* HomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
 		129E97E71C97A6B400875790 /* xcodeGitApiPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xcodeGitApiPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		129E97EB1C97A6B400875790 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		129E97ED1C97A6B400875790 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1282FF611C9A5E48007484A4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1282FF651C9A5F62007484A4 /* HomeView.h */,
+				1282FF661C9A5F62007484A4 /* HomeView.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		129E97DE1C97A6B300875790 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +107,7 @@
 		129E97E91C97A6B400875790 /* xcodeGitApiPractice */ = {
 			isa = PBXGroup;
 			children = (
+				1282FF611C9A5E48007484A4 /* views */,
 				129E98211C97EB3E00875790 /* extensions */,
 				129E980D1C97BEF100875790 /* AFNetworking */,
 				129E98061C97AFC900875790 /* models */,
@@ -134,6 +153,8 @@
 		129E98061C97AFC900875790 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				12527C9B1C99E2BD00FCF577 /* User.h */,
+				12527C9C1C99E2BD00FCF577 /* User.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -167,6 +188,8 @@
 				129E98231C97EB8E00875790 /* UIColor+AppColors.m */,
 				129E98251C97ED6F00875790 /* UIScreen+AppScreen.h */,
 				129E98261C97ED6F00875790 /* UIScreen+AppScreen.m */,
+				12527C981C99DFF900FCF577 /* ApiRoute.h */,
+				12527C991C99DFF900FCF577 /* ApiRoute.m */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -243,11 +266,14 @@
 			files = (
 				129E981D1C97BF2E00875790 /* AFSecurityPolicy.m in Sources */,
 				129E981F1C97BF2E00875790 /* AFURLResponseSerialization.m in Sources */,
+				12527C9A1C99DFF900FCF577 /* ApiRoute.m in Sources */,
 				123E56A11C988480007DFA6E /* GitApiSessionTask.m in Sources */,
 				129E97EF1C97A6B400875790 /* AppDelegate.m in Sources */,
+				12527C9D1C99E2BD00FCF577 /* User.m in Sources */,
 				129E97EC1C97A6B400875790 /* main.m in Sources */,
 				129E981B1C97BF2E00875790 /* AFHTTPSessionManager.m in Sources */,
 				12796D841C98ED3D00F76DFA /* RepositoriesTableView.m in Sources */,
+				1282FF671C9A5F62007484A4 /* HomeView.m in Sources */,
 				129E98271C97ED6F00875790 /* UIScreen+AppScreen.m in Sources */,
 				129E98201C97BF2E00875790 /* AFURLSessionManager.m in Sources */,
 				129E981C1C97BF2E00875790 /* AFNetworkReachabilityManager.m in Sources */,
